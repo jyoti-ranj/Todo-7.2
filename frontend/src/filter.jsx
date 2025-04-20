@@ -1,9 +1,9 @@
 
-import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { filterAtom } from "./stores/atom/theme";
 
-export function FiltterTodo({todos}){
-    
-    const [filter,setFilter] = useState('');
+export function FilterTodo({todos}){
+    const [filter,setFilter] = useRecoilState(filterAtom);
 
     const filterTodos = todos.filter((todo)=>{
         return (

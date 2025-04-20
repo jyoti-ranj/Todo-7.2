@@ -5,3 +5,7 @@ export const themeAtom = atom({
     default: 'light',
 })
 
+export const filterAtom = atom({
+    key: "filterAtom",
+    default: "",
+  });

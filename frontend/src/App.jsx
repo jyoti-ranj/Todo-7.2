@@ -7,7 +7,7 @@ import { todosSelector } from './stores/atom/todo'
 import './App.css'
 import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil'
 import { themeAtom } from './stores/atom/theme'
-import { FiltterTodo } from './filtter'
+import { FilterTodo } from './filter'
 
 function App() {
  
@@ -26,7 +26,7 @@ function MainApp() {
     <div>
       <h1>Todo List</h1>
       <CreateTodo />
-      <FiltterTodo todos={todos} />
+      <FilterTodo todos={todos} />
       {todos.map((todo) => (
         <div key={todo._id}>
            <h2>{todo.title}</h2>
